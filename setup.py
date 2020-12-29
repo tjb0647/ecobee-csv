@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from argparse import ArgumentParser
 
 import requests
@@ -83,6 +84,6 @@ if __name__ == '__main__':
     if not os.path.isfile(CONFIG_FILENAME):
         with open(CONFIG_FILENAME, "w+") as config_file:
             config_file.write("{}")
-            
+
     ecobee = EcobeeSetup(EcobeeConfig())
     ecobee.setup()
